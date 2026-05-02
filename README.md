@@ -13,7 +13,7 @@ wsl --install
 ```
 
 **2. Install Java 8 & SSH**  
-Open your Ubuntu terminal and install the required dependencies:
+Open Ubuntu terminal and install the required dependencies:
 ```bash
 sudo apt update
 sudo apt install openjdk-8-jdk ssh -y
@@ -40,7 +40,7 @@ sudo mv hadoop-3.3.6 /usr/local/hadoop
 ```
 
 **2. Set Environment Variables**  
-Link Java and Hadoop to your system path:
+Link Java and Hadoop to system path:
 ```bash
 echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' >> ~/.bashrc
 echo 'export HADOOP_HOME=/usr/local/hadoop' >> ~/.bashrc
