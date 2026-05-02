@@ -6,7 +6,7 @@
 ## Phase 1: System Environment Setup  
 Configure the base operating system, Java development kit and passwordless SSH required for Hadoop's background daemons.
 
-**1. Initialize WSL & Ubuntu**
+**1. Initialize WSL & Ubuntu**  
 Open Windows PowerShell as Administrator:
 ```powershell
 wsl --install
