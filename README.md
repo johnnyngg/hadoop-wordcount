@@ -1,6 +1,6 @@
 # Hadoop MapReduce: Word Count Application
 
-**Dataset:** *Alice's Adventures in Wonderland*   
+**Dataset:** [*Alice's Adventures in Wonderland - Direct Download Link*](https://www.gutenberg.org/cache/epub/11/pg11.txt)   
 **Environment:** Pseudo-Distributed Hadoop Cluster via Windows Subsystem for Linux (WSL)
 
 ## Phase 1: System Environment Setup  
