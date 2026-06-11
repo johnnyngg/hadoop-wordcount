@@ -126,6 +126,31 @@ hdfs dfs -mkdir -p /user/student/input
 hdfs dfs -put input.txt /user/student/input/
 ```
 
+## Phase 6: Clean Shutdown and Full Reset  
+Run the MapReduce program and analyze the output.
+
+**1. Stop Hadoop Services**
+```bash
+stop-yarn.sh
+stop-dfs.sh
+```
+
+**2. Check Running Processes**  
+```bash
+jps
+```
+If any Hadoop processes are still running (e.g., NameNode, DataNode, ResourceManager), terminate them manually:
+```bash
+kill -9 <PID>
+```
+
+**3. Remove Old Hadoop Data**  
+This clears cached metadata, logs, and temporary HDFS data.
+```bash
+rm -rf ~/hadoop/tmp
+rm -rf ~/hadoop/logs
+rm -rf /tmp/hadoop-*
+```
 ## Phase 6: Execution & Results  
 Run the MapReduce program and analyze the output.
 
@@ -144,4 +169,3 @@ hdfs dfs -cat /user/student/output/part-r-00000 | head -n 20
 Sort the output numerically to reveal the most frequently used words in the entire novel:
 ```bash
 hdfs dfs -cat /user/student/output/part-r-00000 | sort -k2 -n -r | head -n 15
-```
