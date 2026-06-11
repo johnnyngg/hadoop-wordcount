@@ -126,7 +126,26 @@ hdfs dfs -mkdir -p /user/student/input
 hdfs dfs -put input.txt /user/student/input/
 ```
 
-## Phase 6: Clean Shutdown and Full Reset  
+## Phase 6: Execution & Results  
+Run the MapReduce program and analyze the output.
+
+**1. Execute the Job**
+```bash
+hadoop jar wc.jar WordCount /user/student/input /user/student/output
+```
+
+**2. Verify the Results (Alphabetical Sort)**  
+View the top 20 lines to prove the MapReduce framework successfully executed the "Shuffle and Sort" phase and cleaned punctuation:
+```bash
+hdfs dfs -cat /user/student/output/part-r-00000 | head -n 20
+```
+
+**3. Advanced Analytics (Frequency Sort)**  
+Sort the output numerically to reveal the most frequently used words in the entire novel:
+```bash
+hdfs dfs -cat /user/student/output/part-r-00000 | sort -k2 -n -r | head -n 15
+
+## Phase 7: Clean Shutdown and Full Reset  
 Run the MapReduce program and analyze the output.
 
 **1. Stop Hadoop Services**
@@ -151,21 +170,3 @@ rm -rf ~/hadoop/tmp
 rm -rf ~/hadoop/logs
 rm -rf /tmp/hadoop-*
 ```
-## Phase 6: Execution & Results  
-Run the MapReduce program and analyze the output.
-
-**1. Execute the Job**
-```bash
-hadoop jar wc.jar WordCount /user/student/input /user/student/output
-```
-
-**2. Verify the Results (Alphabetical Sort)**  
-View the top 20 lines to prove the MapReduce framework successfully executed the "Shuffle and Sort" phase and cleaned punctuation:
-```bash
-hdfs dfs -cat /user/student/output/part-r-00000 | head -n 20
-```
-
-**3. Advanced Analytics (Frequency Sort)**  
-Sort the output numerically to reveal the most frequently used words in the entire novel:
-```bash
-hdfs dfs -cat /user/student/output/part-r-00000 | sort -k2 -n -r | head -n 15
