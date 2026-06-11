@@ -144,6 +144,7 @@ hdfs dfs -cat /user/student/output/part-r-00000 | head -n 20
 Sort the output numerically to reveal the most frequently used words in the entire novel:
 ```bash
 hdfs dfs -cat /user/student/output/part-r-00000 | sort -k2 -n -r | head -n 15
+```
 
 ## Phase 7: Clean Shutdown and Full Reset  
 Run the MapReduce program and analyze the output.
