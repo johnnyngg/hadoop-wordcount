@@ -34,7 +34,7 @@ Download Hadoop 3.3.6 and configure it for a Pseudo-Distributed (single-node clu
 
 **1. Download and Extract Hadoop**
 ```bash
-wget [https://archive.apache.org/dist/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz](https://archive.apache.org/dist/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz)
+wget https://archive.apache.org/dist/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz
 tar -xzvf hadoop-3.3.6.tar.gz
 sudo mv hadoop-3.3.6 /usr/local/hadoop
 ```
